@@ -1,0 +1,711 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="SFP,limiting, linear,Direct Attach Cable,jitter,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="There are always saying two different types of SFP+ Modules, limiting and linear, as well as Direct Attach Cable (DAC). What is the difference and relationship between?According to Wikipedia:SFP+ modu">
+<meta name="keywords" content="SFP,limiting, linear,Direct Attach Cable,jitter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SFP Module_Limiting &amp; Linear Interface">
+<meta property="og:url" content="http://leiwanlu.github.io/en/2016/08/22/SFP-Module/index.html">
+<meta property="og:site_name" content="Alalalala">
+<meta property="og:description" content="There are always saying two different types of SFP+ Modules, limiting and linear, as well as Direct Attach Cable (DAC). What is the difference and relationship between?According to Wikipedia:SFP+ modu">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://leiwanlu.github.io/en/2016/08/22/SFP-Module/sfpdesign.png">
+<meta property="og:image" content="http://leiwanlu.github.io/en/2016/08/22/SFP-Module/copper_cable.jpg">
+<meta property="og:image" content="http://leiwanlu.github.io/en/2016/08/22/SFP-Module/jitter.png">
+<meta property="og:updated_time" content="2016-09-27T06:44:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SFP Module_Limiting &amp; Linear Interface">
+<meta name="twitter:description" content="There are always saying two different types of SFP+ Modules, limiting and linear, as well as Direct Attach Cable (DAC). What is the difference and relationship between?According to Wikipedia:SFP+ modu">
+<meta name="twitter:image" content="http://leiwanlu.github.io/en/2016/08/22/SFP-Module/sfpdesign.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://leiwanlu.github.io/2016/08/22/SFP-Module/">
+
+  <title> SFP Module_Limiting & Linear Interface | Alalalala </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Alalalala</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Let's start right now!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                SFP Module_Limiting & Linear Interface
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-22T13:10:14+02:00" content="2016-08-22">
+              2016-08-22
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/en/2016/08/22/SFP-Module/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="en/2016/08/22/SFP-Module/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>There are always saying two different types of SFP+ Modules, limiting and linear, as well as Direct Attach Cable (DAC). What is the difference and relationship between?<br>According to <a href="https://en.wikipedia.org/wiki/Small_form-factor_pluggable_transceiver#cite_note-15" target="_blank" rel="noopener">Wikipedia</a>:<br>SFP+ modules can be described as ‘limiting’ or ‘linear’ types; this describes the functionality of the inbuilt electronics. </p>
+<ul>
+<li>Limiting SFP+ modules include a signal amplifier to re-shape the (degraded) received signal whereas linear ones do not. </li>
+<li>Linear modules are mainly used with the low bandwidth standards such as <a href="https://en.wikipedia.org/wiki/10_Gigabit_Ethernet#10GBASE-LRM" target="_blank" rel="noopener">10GBASE-LRM</a>; otherwise, limiting modules are preferred.<a id="more"></a>
+</li>
+</ul>
+<h2 id="SFP-design"><a href="#SFP-design" class="headerlink" title="SFP+ design"></a>SFP+ design</h2><p>A detail explaination of limiting and linear module are descripbed in the article <a href="http://www.lightwaveonline.com/articles/2008/01/the-road-to-sfp-examining-module-and-system-architectures-54884162.html" target="_blank" rel="noopener"><em>The road to SFP+: Examining module and system architectures</em></a>.<br>See below figure</p>
+<p>Current Module, <code>Limiting Module</code> variant, includes a laser driver, a TOSA, a ROSA, and a <strong>limiting amplifier</strong>. The other variant, <code>Linear Module</code>, is majorly intended for 10G Ethernet LRM applications, requires a linear optical receiver path. The third is <code>Retimed Module</code> which is compliant with SFP+, it integrates CDR funtionality within the Tx and/or Rx path and resolves signal integrity challenges to many high-speed systems.<br><img src="/en/2016/08/22/SFP-Module/sfpdesign.png" title="Three variants of SFP+ design"></p>
+<h2 id="Trasmission-Design"><a href="#Trasmission-Design" class="headerlink" title="Trasmission Design"></a>Trasmission Design</h2><p>In transmit direction, there is no difference between limiting and linear module. SFP specification has not requirement for ASIC/SerDes but only at point B. More information check <a href="http://www.lightwaveonline.com/articles/2008/01/the-road-to-sfp-examining-module-and-system-architectures-54884162.html" target="_blank" rel="noopener">link</a>.</p>
+<h2 id="Receive-Design"><a href="#Receive-Design" class="headerlink" title="Receive Design"></a>Receive Design</h2><p>In receive direction, three variants are significantly differ.</p>
+<ul>
+<li><strong>Limiting interface</strong>, a binary 1/0 decision is made in amplitude but not in time. This results in squaring of the waveform, but jitter from the signal after O-to-E conversion is still present at the SFP+ connector. This is reflected in the limiting output jitter specification for Fibre Channel and Ethernet (draft values 0.71 UIpp and 0.7 UIpp, Â­respectively). </li>
+</ul>
+<ul>
+<li>The second receive interface type is called the <strong>Linear interface</strong> because the entire input path is kept linear so electronic dispersion compensation (EDC) ICs on the host board can attempt to recover highly impaired signals. This module type is primarily targeted at 10-Gigabit Ethernet LRM applications, where signals must be sent over long distances of legacy multimode fiber. In the case of a linear interface, the received eye can be totally closed, making jitter measurements in terms of UI not meaningful.<br>The linear module type shifts the majority of the standard compliance onto the host board since 1/0 decisions are not made within the module at all.<br><em>Linear modules also typically have lower gain than limiting modules, making output amplitudes smaller and potentially more difficult for hosts to recover. </em></li>
+</ul>
+<h2 id="Direct-Attach-Cable"><a href="#Direct-Attach-Cable" class="headerlink" title="Direct Attach Cable"></a>Direct Attach Cable</h2><p>In <a href="ftp://ftp.seagate.com/sff/SFF-8431.PDF" target="_blank" rel="noopener">SFF-8431</a>, SFP+ compliant hosts are permitted to support just linear modules, just limiting modules, or both linear and limiting modules. Linear modules are modules which contain a linear receiver. Limiting modules are modules which contain a limiting receiver. Although not required, host supporting linear specification are encouraged to support 10GSFP+Cu direct attach cables (Appendix E). For other copper variants see SFF-8461.<br><img src="/en/2016/08/22/SFP-Module/copper_cable.jpg" title="Copper Cable structure"></p>
+<h2 id="Jitter-measurement"><a href="#Jitter-measurement" class="headerlink" title="Jitter measurement"></a>Jitter measurement</h2><p>Related specification only provides requirement of jitter at B point. There are many factors contributes the jitter. As shown in figure below, They include </p>
+<ul>
+<li>1) ASIC/SerDes output jitter (includes silicon performance, IC package, etc.); </li>
+<li>2) ASIC/SerDes pre-emphasis set point accuracy and variation; </li>
+<li>3) SFI channel loss with variation (temperature, humidity, manufacturing, etc.); </li>
+<li>4) SFI channel return loss with variation; and </li>
+<li>5) crosstalk, which can be a source of pulsewidth shrinkage (PWS). <img src="/en/2016/08/22/SFP-Module/jitter.png" title="Jitter">
+</li>
+</ul>
+<p>Deterministic jitter is combination of the above contributors plus optical module. <strong> WHat is <a href="http://www.ieee802.org/3/ba/public/jan09/li_01_0109.pdf" target="_blank" rel="noopener">deterministic jitter</a> </strong>. In the lab test, total jitter may be less than individual measured jitter, so the determinstic jitter is cancling out. </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SFP/" rel="tag">#SFP</a>
+          
+            <a href="/tags/limiting-linear/" rel="tag">#limiting, linear</a>
+          
+            <a href="/tags/Direct-Attach-Cable/" rel="tag">#Direct Attach Cable</a>
+          
+            <a href="/tags/jitter/" rel="tag">#jitter</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/en/2016/08/19/blah/" rel="next" title="Blah blah blah">
+                <i class="fa fa-chevron-left"></i> Blah blah blah
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/en/2016/08/24/Oscilloscope/" rel="prev" title="Oscilloscope">
+                Oscilloscope <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Wanlu">
+          <p class="site-author-name" itemprop="name">Wanlu</p>
+          <p class="site-description motion-element" itemprop="description">Never wait to Tomorrow</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/leiwanlu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/leiwanlu" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1625756090" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://facebook.com/leiwanlu" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SFP-design"><span class="nav-number">1.</span> <span class="nav-text">SFP+ design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trasmission-Design"><span class="nav-number">2.</span> <span class="nav-text">Trasmission Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Receive-Design"><span class="nav-number">3.</span> <span class="nav-text">Receive Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Direct-Attach-Cable"><span class="nav-number">4.</span> <span class="nav-text">Direct Attach Cable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jitter-measurement"><span class="nav-number">5.</span> <span class="nav-text">Jitter measurement</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wanlu</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'http-leiwanlu-github-io';
+      var disqus_identifier = 'en/2016/08/22/SFP-Module/';
+      var disqus_title = "SFP Module_Limiting & Linear Interface";
+      var disqus_url = 'http://leiwanlu.github.io/en/2016/08/22/SFP-Module/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
